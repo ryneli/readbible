@@ -1,0 +1,18 @@
+% xelatex 字体设定宏包(xelatex font settings for Chinese)
+\ProvidesPackage{zhfontcfg}
+
+\usepackage{anyfontsize}
+\usepackage[left=25mm, top=25mm, bottom=30mm, right=25mm]{geometry}
+\usepackage{xeCJK}
+\setCJKmainfont{Heiti SC}
+
+% \newcommand{\Book}[1]{\section*{\fontsize{30}{30}\selectfont #1}}
+% \newcommand{\Chapter}[1]{\subsection*{\fontsize{25}{25}\selectfont #1}}
+% \newcommand{\Paragraph}[1]{\paragraph{}}
+% \newcommand{\Verse}[1]{\fontsize{23}{23}\selectfont #1}
+
+\newcommand{\Book}[1]{\section*{\fontsize{20}{20}\selectfont #1}}
+\newcommand{\Chapter}[1]{\subsection*{\fontsize{18}{18}\selectfont #1}}
+\newcommand{\Paragraph}[1]{\paragraph{}}
+\newcommand{\Verse}[1]{\fontsize{16}{16}\selectfont #1}
+

@@ -1,0 +1,12 @@
+% xelatex 字体设定宏包(xelatex font settings for Chinese)
+\ProvidesPackage{zhfontcfg}
+
+\usepackage{xeCJK}
+\setCJKmainfont[Scale=2.0]{Heiti SC}
+
+\newcommand{\Book}[1]{\section*{#1}}
+\newcommand{\Chapter}[1]{\subsection*{#1}}
+\newcommand{\Paragraph}[1]{\paragraph{}}
+\newcommand{\Verse}[1]{#1}
+
+
