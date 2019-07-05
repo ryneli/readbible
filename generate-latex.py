@@ -15,7 +15,7 @@ def output(s):
 
 def parseChapter(book, chapter):
     chapterParts = chapter.split('_')
-    output('\Chapter{' + chapterParts[1] + ' ' + chapterParts[2] + '}')
+    output('\Chapter{' + chapterParts[2] + '}')
     with codecs.open(book + '/' + chapter, encoding='utf-8') as file:
         for line in file.readlines():
             if line[0] == '#':
@@ -25,6 +25,7 @@ def parseChapter(book, chapter):
                 
 
 def parseBook(book):
+    output('\\newpage')
     output('\Book{' + book.split('_')[1] + '}')
     chapters = sorted(list(filter(lambda dirname: dirname[0].isdigit(), os.listdir('./' + book))))
     for chapter in chapters:
@@ -32,7 +33,7 @@ def parseBook(book):
 
 def main(start, end):
     output('''
-\\documentclass[a4paper]{ctexart}
+\\documentclass[letter]{ctexart}
 
 
 \\title{CUV Bible}
